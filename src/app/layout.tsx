@@ -1,10 +1,33 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import "./globals.scss";
+import { Poppins, Roboto } from "next/font/google";
+import "@/styles/globals.scss";
 
 const geistRoboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: [
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900",
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+  ],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt_br">
-      <body className={`${geistRoboto.variable}`}>{children}</body>
+      <body className={`${geistRoboto.variable}  ${poppins.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
