@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💻 Desafio Frontend — Tropa Digital
 
-## Getting Started
+Este projeto foi desenvolvido como parte do processo seletivo para a vaga de desenvolvedor Frontend da Tropa Digital. A proposta consiste em implementar uma **tela de login** e uma **tela interna de sistema** com base no layout fornecido via Figma.
 
-First, run the development server:
+## 🔗 Link do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+✅ Acesse o projeto online: [https://tropa-digital-iota.vercel.app/](https://tropa-digital-iota.vercel.app/)
+
+## 📌 Requisitos do Desafio
+
+- ✅ Desenvolvido com **Next.js (React)**
+- ✅ Estilização com **SCSS Modules**
+- ✅ Utilização de **rotas nativas do Next.js**
+- ✅ **Fluxo de login simulado**
+- ✅ Foco especial em **detalhes de layout** e **responsividade**
+- ✅ Projeto publicado online para avaliação
+
+## 📁 Estrutura do Projeto
+
+```
+/
+├── components/
+│   ├── Buttons/
+│   ├── Icons/
+│   └── Sidebar.tsx
+├── pages/
+│   ├── index.tsx          # Tela de Login
+│   └── dashboard.tsx      # Tela Interna do Sistema
+├── public/
+│   ├── logo.png
+│   ├── person.png
+│   └── kaique.png
+├── styles/
+│   ├── page.module.scss
+│   ├── dashboard.module.scss
+│   └── sidebar.module.scss
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧪 Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Tela de Login**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  - Simula autenticação de usuário.
+  - Apresenta layout responsivo e fiel ao design no Figma.
 
-## Learn More
+- **Dashboard**
+  - Visualização de eventos com tabela responsiva.
+  - Filtros simulados e botão de inserir novo evento.
+  - Navegação lateral com menu e informações do usuário.
+  - Comportamento adaptado para dispositivos móveis.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js](https://nextjs.org/) — Framework React para produção
+- [React Icons](https://react-icons.github.io/react-icons/) — Ícones para a interface
+- [SCSS Modules](https://sass-lang.com/) — Estilização modular
+- [Vercel](https://vercel.com/) — Hospedagem e deploy contínuo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🖼️ Layout
 
-## Deploy on Vercel
+O layout original pode ser consultado no Figma:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🔗 [Figma - Teste FRONTEND - Tropa Digital](https://www.figma.com/design/xzsmAYKHPRaqMTNBBolJQH/Teste-FRONTEND---Tropa-Digital?node-id=803-8066&t=QyZbvHP789yhQzxZ-1)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Como Rodar Localmente (opcional para outros avaliadores)
+
+```bash
+# Clone o repositório
+git clone git@github.com:fvxstx/TropaDigital.git
+
+# Acesse a pasta
+cd tropa-digital-frontend
+
+# Instale as dependências
+npm install
+
+# Rode o servidor de desenvolvimento
+npm run dev
+```
+
+## 🧑‍💻 Autor
+
+**Fausto Torres**
