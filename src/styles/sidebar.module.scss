@@ -1,0 +1,266 @@
+.mobileToggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  background-color: #cc6237;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #b55530;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.sidebar {
+  min-height: 100svh;
+  width: fit-content;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-right: 1px solid #0000001a;
+  font-family: var(--font-roboto);
+  transition: transform 0.3s ease-in-out;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  max-width: 390px;
+  width: 9rem;
+}
+
+.containerNav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+
+  p {
+    color: #a3a3a3;
+    font-size: 9px;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+
+    li {
+      color: #252525;
+      display: flex;
+      gap: 8px;
+      font-size: 14px;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 500;
+      border-radius: 5px;
+      padding: 8px 0px;
+      width: 100%;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: #cc6237;
+        color: #ffffff;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.linkIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.bottomContainer {
+  border-top: 2px solid;
+  border-color: #f8f8f8;
+  padding: 20px 0;
+}
+
+.userContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.userPhoto {
+  padding: 2px;
+  border: 2px solid #cc6237;
+  border-radius: 15px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 0;
+  }
+}
+
+.nameTag {
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  p {
+    margin: 0;
+    font-size: 11px;
+    color: #00000080;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: #252525;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-roboto);
+    width: 100%;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #cc6237;
+      color: #ffffff;
+      border-radius: 5px;
+      padding: 8px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobileToggle {
+    display: block;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateY(-100%);
+    border-right: none;
+    border-bottom: 1px solid #0000001a;
+    overflow-y: auto;
+
+    &.sidebarOpen {
+      transform: translateY(0);
+    }
+  }
+
+  .topContainer {
+    padding-top: 60px;
+  }
+
+  .logo {
+    width: 6rem;
+  }
+
+  .containerNav {
+    nav > ul {
+      li {
+        padding: 12px 16px;
+        font-size: 16px;
+
+        &:hover {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+  .bottomContainer {
+    margin-top: 20px;
+  }
+
+  .userContainer {
+    margin-bottom: 20px;
+  }
+
+  .buttonContainer {
+    button {
+      padding: 12px 8px;
+      font-size: 16px;
+
+      &:hover {
+        padding: 12px 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .sidebar {
+    width: 280px;
+    min-width: 280px;
+  }
+
+  .logo {
+    width: 7rem;
+  }
+}

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import styles from "./page.module.scss";
+import styles from "@/styles/page.module.scss";
+import LoginForm from "@/components/Buttons/LoginForm";
 
 export default function Home() {
   return (
@@ -20,17 +21,7 @@ export default function Home() {
             <p>Entre com sua conta para acessar o perfil</p>
           </div>
 
-          <form action="" className={styles.formContainer}>
-            <div className={styles.boxLabelInput}>
-              <label htmlFor="">Email</label>
-              <input placeholder="email@email.com" type="email" />
-            </div>
-            <div className={styles.boxLabelInput}>
-              <label htmlFor="">Senha</label>
-              <input placeholder="*****" type="password" />
-            </div>
-            <button>Enviar</button>
-          </form>
+          <LoginForm />
         </div>
         <div className={styles.containerPerson}>
           <Image
